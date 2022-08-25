@@ -87,6 +87,9 @@ vnoremap <leader>m :call ToggleMouse()<cr>
 nnoremap <leader>n :call ToggleNumber()<cr>
 nnoremap <leader>s :source %<cr>
 nnoremap <leader>f :call ShowFuncName()<cr>
+
+" expand path in command line, e.g. :e %%/
+cabbr <expr> %% expand('%:p:h')
  
 colo molokai
 
