@@ -116,3 +116,9 @@ if has("gui_running")
     nmap <S-F12> :call FontSizeMinus()<CR>
     nmap <F12> :call FontSizePlus()<CR>
 endif
+
+if has('persistent_undo')
+   silent !mkdir -p ~/.cache/vim/undo
+   set undofile
+   set undodir=~/.cache/vim/undo
+endif
