@@ -75,6 +75,7 @@ set hlsearch
 set incsearch
 set wildignore=*.o,*.class,*.pyc
 set guifont=Source\ Code\ Pro\ Medium\ 14
+set mouse=""
 
 filetype indent on
 syntax on
