@@ -75,7 +75,6 @@ set hlsearch
 set incsearch
 set wildignore=*.o,*.class,*.pyc
 set guifont=Source\ Code\ Pro\ Medium\ 14
-set mouse=""
 
 filetype indent on
 syntax on
@@ -115,6 +114,9 @@ au BufNewFile,BufRead *.rs call SetWidth(4)
 if has("gui_running")
     nmap <S-F12> :call FontSizeMinus()<CR>
     nmap <F12> :call FontSizePlus()<CR>
+    set mouse=a
+else
+    set mouse=""
 endif
 
 if has('persistent_undo')
