@@ -75,6 +75,8 @@ set hlsearch
 set incsearch
 set wildignore=*.o,*.class,*.pyc
 set guifont=Source\ Code\ Pro\ Medium\ 14
+set listchars=tab:▶\ ,space:·,eol:¬,extends:>,precedes:<
+set list
 
 filetype indent on
 syntax on
@@ -110,6 +112,7 @@ au BufNewFile,BufRead .funcs set filetype=zsh
 au BufNewFile,BufRead .funcs_loc set filetype=zsh
 au BufNewFile,BufRead *.py call SetWidth(4)
 au BufNewFile,BufRead *.rs call SetWidth(4)
+au BufNewFile,BufRead *.go call SetWidth(4)
 
 if has("gui_running")
     nmap <S-F12> :call FontSizeMinus()<CR>
