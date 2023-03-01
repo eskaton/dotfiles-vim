@@ -48,6 +48,14 @@ function! ToggleNumber()
    endif
 endfunction
 
+function! ToggleList()
+   if (!&list)
+      set list
+   else 
+      set nolist
+   endif
+endfunction
+
 function! ShowFuncName()
   let lnum = line(".")
   let col = col(".")
@@ -87,6 +95,7 @@ nnoremap <leader>p :set paste!<cr>
 nnoremap <leader>m :call ToggleMouse()<cr>
 vnoremap <leader>m :call ToggleMouse()<cr>
 nnoremap <leader>n :call ToggleNumber()<cr>
+nnoremap <leader>l :call ToggleList()<cr>
 nnoremap <leader>s :source %<cr>
 nnoremap <leader>f :call ShowFuncName()<cr>
 
